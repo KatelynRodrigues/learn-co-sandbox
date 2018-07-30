@@ -1,0 +1,15 @@
+.navigation {
+  width: 100%;
+  height: 50px;
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  font-size: 400%;
+}
+
+body {
+  background: url("https://media.giphy.com/media/13JAvS2OyKJDry/giphy.gif");
+  background-size: contain;
+}
