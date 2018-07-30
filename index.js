@@ -19,6 +19,7 @@ $(document).ready(function(){
 listenForClicksOnCells()  
   
   var MARK = "X"
+  var numberTiles = 0
   
   function markCell(){
     //check whether or not the cell has been marked already so you cant remark it
@@ -27,9 +28,11 @@ listenForClicksOnCells()
       this.innerText = MARK
       if (playerWon(MARK) === true){
         console.log(MARK + " won the game")
+        resetGame()
       }
       
       xOro()
+      numberTiles++
   }
   
   //alternates between x and o on each click
@@ -57,6 +60,12 @@ function playerWon(mark) {
     if (won) return true
   }
   return false // if we got here, it means no winning combination was found and we can safely return false
+}
+
+function resetGame(){
+  MARK = "X"
+  numberTiles = 0
+  $(".cell").text("")
 }
   
 })
